@@ -4,8 +4,8 @@ jobs:
   build:
     docker:
       - image: cimg/node:23.8.0
-      - environment:
-        TEST_DATABASE_URL: postgres://postgres@localhost:5432/circleci_test
+        environment:
+          TEST_DATABASE_URL: postgres://postgres@localhost:5432/circleci_test
       - image: cimg/postgres:17.3.0
     steps:
       - checkout
