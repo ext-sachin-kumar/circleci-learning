@@ -9,5 +9,6 @@ jobs:
       - image: cimg/postgres:17.3.0
     steps:
       - checkout
-      - name: WHO_AM_I
-        run: whoami
+      - run:
+          name: WHO_AM_I
+          command: whoami
