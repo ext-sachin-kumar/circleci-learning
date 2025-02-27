@@ -12,7 +12,7 @@ jobs:
           POSTGRES_PASSWORD: password  # ✅ Add a password
           POSTGRES_DB: circleci_test   # ✅ Set default DB (optional)
     steps:
-      - run: checkout
+      - checkout
       - run: sudo apt-get update && sudo apt-get install -y postgresql-client
       - run:
           name: "Check Who am i"
