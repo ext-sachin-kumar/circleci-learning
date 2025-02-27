@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: install psql
-          command: sudo apt install postgresql-client-9.6
+          command: sudo apt install postgresql-client-16
       - run:
           name: WHO_AM_I
           command: whoami
