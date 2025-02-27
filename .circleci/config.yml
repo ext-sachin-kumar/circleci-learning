@@ -10,6 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install psql
+          command: sudo apt install postgresql-client-12
+      - run:
           name: WHO_AM_I
           command: whoami
       - run: 
