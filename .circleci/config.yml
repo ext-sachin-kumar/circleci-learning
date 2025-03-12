@@ -28,14 +28,15 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-  schedule-workflow:
+  schedule-build-and-deploy:
     triggers:
-      - schedule: 
-          cron: "0 0 * * *"
+      - schedule:
+          cron: "0 * * * *"
           filters:
             branches:
               only:
                 - main
+  
     jobs:
       - build
       - deploy
